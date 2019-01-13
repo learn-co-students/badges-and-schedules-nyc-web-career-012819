@@ -11,9 +11,8 @@ end
 
 def assign_rooms(speakers)
   narray = []
-  rooms = 1
-speakers.each do |b| narray.push("Hello, #{b}! You'll be assigned to room #{rooms}!")
-rooms+=1
+speakers.each_with_index do |value, index|
+  narray.push("Hello, #{value}! You'll be assigned to room #{index+1}!")
 end
 narray
 end
